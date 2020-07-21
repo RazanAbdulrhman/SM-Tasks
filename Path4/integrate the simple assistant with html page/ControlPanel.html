@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Control Panel</title>
+		<link href="css/style.css" rel="stylesheet">
+		<link href="css/normalize.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet"/>
+		<style>h1{color:white;}</style>
+
+	</head>
+	<body>
+
+		<div class="control-page">
+		
+			<div class="logo">
+				<h1 color="white">Control Panel</h1>
+				<img src="robo.png" alt="logo">
+			</div>
+		<form action="CP_data.php" method= "POST"> 
+			<div class="control">
+			
+				<div class="top">
+				<button class="button" type="submit" name="buton" value="forward">Forward</button>
+				</div>
+				
+				<div class="middle justify-content-center align-items-center">
+				<button class="button" type="submit" name="buton" value="Left">left</button> 
+				<button class="button stop" type="submit" name="buton" value="Stop">Stop</button>
+				<button class="button" type="submit" name="buton" value="right">Right</button>
+				</div>
+				
+				<div class="top">
+				<button class="button" type="submit" name="buton" value="backward">Backward</button>
+				</div>
+				
+			</div>
+		</form>	
+		</div>
+		<script>
+  window.watsonAssistantChatOptions = {
+      integrationID: "3a656ecc-f349-40ba-a6b6-6d7b5100c880", // The ID of this integration.
+      region: "eu-de", // The region your integration is hosted in.
+      serviceInstanceID: "181fc231-eb1c-46f7-8ba0-daeaf4b65e91", // The ID of your service instance.
+      onLoad: function(instance) { instance.render(); }
+    };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+    document.head.appendChild(t);
+  });
+</script>
+	</body>
+</html>	
